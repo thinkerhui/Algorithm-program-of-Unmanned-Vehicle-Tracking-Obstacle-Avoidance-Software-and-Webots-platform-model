@@ -9,8 +9,67 @@
 项目指导老师：陈建国    组长：吴仰晖    组员：李健文、梁竞冀、孙惠祥、张凯茗
 
 ## 仓库说明
+
 ### 目录构成
+
+```
+project/
+├── algorithms/                    # 算法模块
+│   ├── path_planning/             # 路径规划算法
+│   │   ├── a_star.py              # A*算法
+│   │   └── prm.py                 # PRM算法
+│   │
+│   ├── local_planning/           # 局部规划算法
+│   │   ├── dwa.py                 # DWA算法
+│   │   ├── apf.py                 # 人工势场算法
+│   │   └── mpc.py                 # MPC算法
+│   │
+│   └── trajectory_tracking/      # 轨迹跟踪控制器
+│       └── pid_controller.py      # PID控制器
+│
+├── controllers/                   # Webots控制器
+│   ├── base/                      # 基础控制器类
+│   │   ├── supervisor_controller.py  # 基础Supervisor控制器
+│   │   └── vehicle_controller.py     # 车辆通用控制接口
+│   │
+│   ├── examples/                 # 示例控制器
+│   │   ├── a_star_controller.py
+│   │   ├── prm_controller.py
+│   │   ├── dwa_controller.py
+│   │   ├── atf_controller.py
+│   │   └── atf_with_pid_controller.py
+│   │
+│   └── hybrid/                   # 混合控制器
+│       └── prm_pid_controller.py
+│
+├── utils/                         # 工具函数
+│   ├── math_utils.py              # 数学工具
+│   ├── geometry.py                # 几何计算
+│   └── point.py                   # 点类
+│
+└── worlds/                        # Webots世界文件
+    ├── empty.wbt
+    ├── trace.wbt
+    └── world_new.wbt
+
+docs/
+├── algorithms/                    # 算法文档
+├── usage/                        # 使用指南
+│   └── QUICK_START.md            # 快速开始指南
+└── archive/                       # 归档文件
+```
+
 ### 开始/运行
+
+1. **安装Webots**: 下载并安装 [Webots](https://www.cyberbotics.com/download)
+2. **打开项目**: 使用VSCode打开本仓库
+3. **运行仿真**: 
+   - 打开Webots
+   - 选择世界文件 (`project/worlds/empty.wbt`)
+   - 设置机器人控制器
+   - 点击运行
+
+详细启动指南请参考 [docs/usage/QUICK_START.md](docs/usage/QUICK_START.md)
 
 ## 算法运行动态图展示
 

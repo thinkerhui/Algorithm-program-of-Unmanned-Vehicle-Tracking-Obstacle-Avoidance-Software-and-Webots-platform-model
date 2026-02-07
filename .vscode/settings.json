@@ -1,0 +1,39 @@
+{
+    // Python 配置
+    "python.defaultInterpreterPath": "C:/Users/Administrator/AppData/Local/Programs/Python/Python38/python.exe",
+    "python.autoComplete.extraPaths": [
+        "${workspaceFolder}/project/controllers/all_controller",
+        "${workspaceFolder}/project/controllers"
+    ],
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/project/controllers/all_controller",
+        "${workspaceFolder}/project/controllers"
+    ],
+    "python.analysis.stubPath": "${workspaceFolder}/project/controllers",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.formatting.provider": "none",
+    // 编辑器配置
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.wordWrap": "on",
+    // 文件排除
+    "files.exclude": {
+        "**/.git": true,
+        "**/.idea": true,
+        "**/__pycache__": true,
+        "**/*.pyc": true
+    },
+    // 搜索排除
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.pyc": true
+    },
+    // 终端配置
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}/project/controllers/all_controller"
+    }
+}
